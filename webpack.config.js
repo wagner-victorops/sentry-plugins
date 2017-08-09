@@ -1,7 +1,8 @@
 /*eslint-env node*/
 /*eslint no-var:0*/
 var path = require('path'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 var APPS = [
   'itunesconnect',
@@ -26,7 +27,6 @@ function getConfig(app) {
       'reflux': 'Reflux',
       'moment': 'moment',
       'sentry': 'Sentry',
-      'underscore': 'underscore'
     },
     name: app,
     entry: pyName,
@@ -40,7 +40,9 @@ function getConfig(app) {
         }
       ]
     },
-    plugins: [],
+    plugins: [
+      new LodashModuleReplacementPlugin(),
+    ],
     resolve: {
       modules: [
         __dirname,

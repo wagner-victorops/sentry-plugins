@@ -15,22 +15,12 @@ pytest_plugins = ['sentry.utils.pytest']
 
 def pytest_configure(config):
     settings.INSTALLED_APPS = tuple(settings.INSTALLED_APPS) + (
-        'sentry_plugins.amazon_sqs',
-        'sentry_plugins.asana',
-        'sentry_plugins.bitbucket',
-        'sentry_plugins.heroku',
-        'sentry_plugins.hipchat_ac',
-        'sentry_plugins.github',
-        'sentry_plugins.gitlab',
-        'sentry_plugins.pagerduty',
-        'sentry_plugins.pivotal',
-        'sentry_plugins.pushover',
-        'sentry_plugins.itunesconnect',
-        'sentry_plugins.jira',
-        'sentry_plugins.segment',
-        'sentry_plugins.sessionstack',
-        'sentry_plugins.slack',
-        'sentry_plugins.victorops',
+        'sentry_plugins.amazon_sqs', 'sentry_plugins.asana', 'sentry_plugins.bitbucket',
+        'sentry_plugins.heroku', 'sentry_plugins.hipchat_ac', 'sentry_plugins.github',
+        'sentry_plugins.gitlab', 'sentry_plugins.pagerduty', 'sentry_plugins.pivotal',
+        'sentry_plugins.pushover', 'sentry_plugins.jira', 'sentry_plugins.segment',
+        'sentry_plugins.sessionstack', 'sentry_plugins.slack', 'sentry_plugins.victorops',
+        'sentry_plugins.itunesconnect'
     )
 
     # TODO(dcramer): we need a PluginAPITestCase that can do register/unregister

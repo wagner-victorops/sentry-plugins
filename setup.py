@@ -15,11 +15,9 @@ from setuptools import setup, find_packages
 from setuptools.command.sdist import sdist as SDistCommand
 from setuptools.command.develop import develop as DevelopCommand
 
-from sentry.utils.distutils import (
-    BuildAssetsCommand
-)
+from sentry.utils.distutils import (BuildAssetsCommand)
 
-VERSION = '8.19.0.dev0'
+VERSION = '8.20.0.dev0'
 
 tests_require = [
     'exam',
@@ -139,9 +137,7 @@ setup(
         ],
     },
     classifiers=[
-        'Intended Audience :: Developers',
-        'Intended Audience :: System Administrators',
-        'Operating System :: OS Independent',
-        'Topic :: Software Development'
+        'Intended Audience :: Developers', 'Intended Audience :: System Administrators',
+        'Operating System :: OS Independent', 'Topic :: Software Development'
     ],
 )
