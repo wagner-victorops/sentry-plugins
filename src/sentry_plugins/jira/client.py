@@ -52,7 +52,7 @@ class JiraClient(ApiClient):
     def get_create_meta(self, project):
         return self.get(
             self.META_URL,
-            {'projectKeys': project, 'expand': 'projects.issuetypes.fields'},
+            params={'projectKeys': project, 'expand': 'projects.issuetypes.fields'},
         )
 
     def get_create_meta_for_project(self, project):
