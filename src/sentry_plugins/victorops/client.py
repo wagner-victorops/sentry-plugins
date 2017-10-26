@@ -53,6 +53,9 @@ class VictorOpsClient(object):
                 'timestamp': timestamp,
                 'state_message': state_message,
                 'monitoring_tool': monitoring_tool or self.monitoring_tool,
+                'details': details,
+                'project': project,
+                'issue': issue,
             }
         )
         return self.request(kwargs)
